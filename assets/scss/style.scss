@@ -1,0 +1,754 @@
+/**
+ * @Main scss for (Template/Project Name)
+ * @project     - auto stack
+ * @author      - 
+ * @created_by  - kawsarBinSiraj
+ * @created_at  - 28/10/2020
+ * @modified_by -
+ */
+
+
+
+
+/* css for reset, root, fonts import */
+// used : font-family: 'Sofia Pro';
+// used :  font-family: 'Lato', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    background-color: #ffffff;
+    overflow-x: hidden;
+}
+
+:root {
+    --mainColor: #0096FF;
+    --mainColorDark: #0079FF;
+    --infoColor: #9BDAEA;
+    --grayColor: #8C8681;
+    --grayLightColor: #EFEFEF;
+    --blueUltraDark: #091739;
+    --containerMaxWidth: 1140px;
+}
+
+/* css for reset, root, fonts import -END*/
+
+
+
+
+
+/* css for helper classes */
+.container {
+    max-width: var(--containerMaxWidth);
+    width: 100%;
+    margin: auto;
+    padding: 0 15px;
+}
+
+.container-fluid {
+    max-width: calc(var(--containerMaxWidth) + 130px);
+    width: 100%;
+    margin: auto;
+    padding: 0 15px;
+}
+
+.img-fluid {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+}
+
+.sectionHeader {
+    .sectionTitle {
+        color: var(--blueUltraDark);
+        font-size: 36px;
+        line-height: calc(100% + 8px);
+        font-family: 'Sofia Pro';
+        font-weight: 800;
+        margin-bottom: 13px;
+    }
+
+    .sectionSubTitle {
+        font-size: 14px;
+        line-height: calc(100% + 8px);
+        font-family: 'Sofia Pro';
+        font-weight: 300;
+        color: #6F8195;
+    }
+}
+
+/*  css for helper classes -END*/
+
+
+
+
+/* css for header */
+.header {
+    @media (max-width:768px) {
+        .container {
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+        }
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+
+        &#forMobile {
+            display: none;
+        }
+
+        @media (max-width:768px) {
+            &#forDesktop {
+                display: none;
+            }
+
+            &#forMobile {
+                display: block;
+            }
+        }
+    }
+}
+
+/* css for header -END*/
+
+
+
+
+
+/* css for financeApplication*/
+.financeApplication {
+    padding-top: 85px;
+    padding-bottom: 80px;
+
+    .financeApplicationGrid-items {
+        margin-top: 80px;
+        display: grid;
+        grid-template-columns: 8fr 5fr;
+        grid-column-gap: 75px;
+        padding-bottom: 80px;
+        border-bottom: 1px solid #EFF7FF;
+
+        .financeApplication-left {
+            .rangeSliderInput-panel {
+                font-family: 'Sofia Pro';
+
+                .rangeSliderInput-item {
+
+                    .rangeSliderInput {
+                        .permitValue {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            margin-bottom: 15px;
+                            color: #6F8195;
+                            font-size: 14px;
+                            font-weight: 300;
+                        }
+                    }
+
+                    +.rangeSliderInput-item {
+                        margin-top: 45px;
+                    }
+
+                    >label {
+                        display: block;
+                        font-size: 18px;
+                        font-weight: 800;
+                        color: var(--blueUltraDark);
+                        margin-bottom: 30px;
+                    }
+                }
+            }
+        }
+
+        .financeApplication-right {
+            .approximateContent {
+                padding: 30px 25px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                border-radius: 6px;
+                color: #fff;
+                background: -webkit-linear-gradient(to right, var(--mainColor), var(--mainColorDark));
+                background: linear-gradient(to right, var(--mainColor), var(--mainColorDark));
+                box-shadow: 0 10px 30px rgba(0, 119, 255, .2);
+
+                .approximateContent-subTitle {
+                    font-size: 16px;
+                    font-family: 'Lato', sans-serif;
+                    font-weight: 700;
+                }
+
+                .approximateContent-title {
+                    font-size: 36px;
+                    font-weight: 700;
+                    display: flex;
+                    align-items: flex-end;
+                    margin: 13px 0;
+                    font-family: 'Lato', sans-serif;
+
+                    >span {
+                        font-size: 14px;
+                        font-weight: 400;
+                        margin-left: 8px;
+                    }
+                }
+
+                .help {
+                    margin-top: 10px;
+                    font-size: 14px;
+                    font-weight: 300;
+                    line-height: 22px;
+                    color: #D8F0FF;
+                    font-family: 'Sofia Pro';
+                }
+            }
+
+        }
+    }
+}
+
+/* css for financeApplication -END*/
+
+
+
+
+
+/* css for applicationSteps */
+.applicationSteps {
+    padding-bottom: 80px;
+
+    .financeApplication-tab {
+        .tabLists {
+            list-style: none;
+
+            a {
+                text-decoration: none;
+            }
+        }
+    }
+
+
+    .financeApplication-tabModule {
+        .tabLists {
+            display: flex;
+            flex-wrap: wrap;
+            grid-gap: 30px;
+
+            li {
+
+                a {
+                    font-family: 'Sofia Pro';
+                    width: 160px;
+                    height: 90px;
+                    font-size: 16px;
+                    font-weight: 300;
+                    padding: 10px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    text-align: center;
+                    position: relative;
+                    color: #6F8195;
+                    background-color: #F0F7FF;
+                    border-radius: 6px;
+
+
+                    p {
+                        margin-top: 10px;
+                        font-size: 16px;
+                        color: #6F8195;
+                    }
+
+                    &.activeTab {
+                        background: -webkit-linear-gradient(to right, var(--mainColor), var(--mainColorDark));
+                        background: linear-gradient(to right, var(--mainColor), var(--mainColorDark));
+                        box-shadow: 0 10px 30px rgba(0, 119, 255, .2);
+                        color: #fff;
+                        font-weight: 500;
+
+                        >img {
+                            filter: grayscale(100%) brightness(300%);
+                        }
+
+                        p {
+                            color: #ffffff;
+                        }
+                    }
+
+                }
+
+                &:first-child {
+                    a {
+                        &::after {
+                            border-top-left-radius: 20px;
+                            border-bottom-left-radius: 20px;
+                        }
+                    }
+                }
+
+                &:last-child {
+                    a {
+                        &::after {
+                            border-top-right-radius: 20px;
+                            border-bottom-right-radius: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .financeApplication-tabContent {
+        margin-top: 80px;
+
+        .tabListItems {
+            padding-bottom: 40px;
+            border-bottom: 1px solid #EFF7FF;
+
+            .active {
+                display: block;
+            }
+
+            .hide {
+                display: none;
+            }
+
+            .list {
+                width: 100%;
+                text-align: left;
+
+                .form-group {
+                    font-family: 'Sofia Pro';
+
+                    &.select-purpose {
+                        margin-bottom: 30px;
+                    }
+
+                    label {
+                        display: block;
+                        margin-bottom: 10px;
+                        font-size: 14px;
+                        font-weight: 600;
+                        color: #091739;
+                    }
+
+
+
+                    .form-control,
+                    .select2 {
+                        display: block;
+                        width: 100% !important;
+                        height: 52px;
+                    }
+
+                    .form-control,
+                    .select2-container .select2-selection--single {
+                        display: block;
+                        width: 100% !important;
+                        height: 52px;
+                        padding-left: 25px;
+                        padding-right: 25px;
+                        border-radius: 6px;
+                        background-color: #F4F6FB;
+                        border: 2px solid #F4F6FB;
+                        transition: all .3s;
+                        color: #6F8195;
+                        font-size: 14px;
+                        font-weight: 400;
+
+                        &:focus {
+                            background-color: #ffffff;
+                            border-color: var(--mainColorDark);
+                            outline: none;
+                        }
+                    }
+
+                    .form-control {
+                        &.textarea-control {
+                            height: auto !important;
+                            padding-top: 15px;
+                        }
+
+                        &#datepicker {
+                            background-image: url(../img/calendar-dates.svg);
+                            background-size: 20px;
+                            background-position: calc(100% - 20px) center;
+                            background-repeat: no-repeat;
+                        }
+                    }
+
+                    .select2-container--default .select2-selection--single .select2-selection__rendered {
+                        line-height: 48px !important;
+                        color: #6F8195;
+                        font-size: 14px;
+                    }
+
+                    .select2-container--default .select2-selection--single .select2-selection__arrow {
+                        top: 16px;
+                        right: 20px;
+                        border: 0;
+                        background: url(../img/down-arrow.svg);
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        width: 15px;
+                        height: 15px;
+                    }
+
+                    .select2-container--default .select2-selection--single .select2-selection__arrow b {
+                        border: 0;
+                    }
+
+                    .select2-container--open {
+                        .select2-selection--single {
+                            background-color: #ffffff !important;
+                            border-color: var(--mainColorDark) !important;
+                            outline: none;
+                        }
+                    }
+                }
+
+                .col-full-group {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr;
+                    grid-column-gap: 30px;
+                    grid-row-gap: 30px;
+                }
+
+                .col-gridBy-2 {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    grid-column-gap: 30px;
+                }
+
+                .col-gridBy-span-2 {
+                    display: grid;
+                    grid-template-columns: 2.1fr 1fr;
+                    grid-column-gap: 30px;
+                    margin-top: 30px;
+                }
+
+                .form-check {
+                    margin-bottom: 20px;
+                    font-family: 'Sofia Pro';
+
+                    label {
+                        margin-bottom: 0px;
+                        position: relative;
+                        font-size: 16px;
+                        color: #6F8195;
+                        font-weight: 300;
+                        padding-left: 32px;
+                        line-height: calc(100% + 10px);
+                    }
+
+                    .checkMark {
+                        position: absolute;
+                        top: 3px;
+                        left: 0;
+                        height: 20px;
+                        width: 20px;
+                        border: 3px solid #E5E5E5;
+                        border-radius: 6px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        >img {
+                            display: none;
+                        }
+                    }
+
+                    .form-check-input {
+                        position: absolute;
+                        opacity: 0;
+                        cursor: pointer;
+                        height: 0;
+                        width: 0;
+
+                        &:checked~.checkMark {
+                            background-color: #55A747;
+                            border-color: #55A747;
+
+                            >img {
+                                display: block;
+                            }
+                        }
+                    }
+
+                }
+
+                .submit-step-list-group-title {
+                    margin-bottom: 40px;
+                    font-size: 24px;
+                    color: #091739;
+                    font-weight: 800;
+                }
+
+                .submit-step-list-group {
+                    >p {
+                        font-size: 16px;
+                        font-weight: 400;
+                        line-height: calc(100% + 10px);
+                        margin-bottom: 30px;
+                        font-family: 'Sofia Pro';
+                    }
+
+                    ul {
+                        padding-left: 40px;
+                        list-style-position: inside;
+
+                        li {
+                            display: grid;
+                            grid-template-columns: 20px 1fr;
+                            align-items: flex-start;
+                            margin-bottom: 15px;
+
+                            >img {
+                                position: relative;
+                                top: 8px;
+                            }
+
+                            p {
+                                font-size: 16px;
+                                line-height: calc(100% + 10px);
+                                font-weight: 300;
+                                font-family: 'Sofia Pro';
+                            }
+                        }
+                    }
+
+
+                }
+            }
+        }
+
+        .btn-steps {
+            margin-top: 30px;
+            display: flex;
+            justify-content: flex-end;
+            grid-gap: 10px;
+
+            button {
+                display: inline-block;
+                padding: 20px 42px;
+                color: #ffffff;
+                background: -webkit-linear-gradient(to right, var(--mainColor), var(--mainColorDark));
+                background: linear-gradient(to right, var(--mainColor), var(--mainColorDark));
+                box-shadow: 0 10px 30px rgba(0, 119, 255, .2);
+                border: 0;
+                outline: 0;
+                cursor: pointer;
+                transition: all .3s;
+                border-radius: 6px;
+
+                &#btn-prev {
+                    background: none;
+                    border: 2px solid var(--mainColorDark);
+                    color: var(--mainColorDark);
+                    box-shadow: none;
+                }
+
+                &#btn-submit {
+                    background: linear-gradient(145deg, #53A653, #408140);
+                    box-shadow: 0 10px 30px rgba(83, 166, 83, .1);
+                }
+
+                &:hover {
+                    opacity: .5;
+                }
+            }
+        }
+    }
+}
+
+.ui-widget-header .ui-icon {
+    background-image: url(../img/ui-icons_444444_256x240.png);
+}
+
+/* css for applicationSteps -END*/
+
+
+
+
+
+
+/* css for privacyPolicy */
+.privacyPolicy-sec {
+    .privacyPolicy {
+        border-top: 2px solid #ddd;
+        margin-top: 45px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+
+        ul {
+            @media (max-width:768px) {
+                justify-content: center;
+            }
+        }
+    }
+}
+
+.privacyPolicy {
+    ul {
+        display: flex;
+        list-style: none;
+
+        li {
+            padding: 0 10px;
+            line-height: 10px;
+
+            &:first-child {
+                padding-left: 0;
+            }
+
+            &:last-child {
+                padding-right: 0;
+            }
+
+            a {
+                font-weight: 400;
+                color: var(--mainColorDark);
+                text-decoration: none;
+                transition: all .3s;
+                font-size: 14px;
+
+                &:hover {
+                    color: var(--infoColor);
+                }
+            }
+
+            +li {
+                border-left: 2px solid var(--mainColorDark);
+            }
+        }
+    }
+}
+
+/* css for privacyPolicy -END*/
+
+
+
+
+
+/* css for lendingPartner*/
+.lendingPartner {
+    padding: 90px 0;
+    background-color: #F0F7FF;
+
+    .lendingPartnerCarousel {
+        margin-top: 50px;
+
+        .carouselItem {
+            height: 75px;
+            background-color: #fff;
+            width: 100%;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            img {
+                max-width: 100% !important;
+                width: auto !important;
+                max-height: 100%;
+                height: auto !important;
+            }
+        }
+
+        .owl-nav {
+            button {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-60%);
+                font-size: 32px;
+
+                &:focus {
+                    outline: none;
+                    border: 0;
+                }
+
+                &.owl-prev {
+                    left: -40px;
+                }
+
+                &.owl-next {
+                    left: initial;
+                    right: -40px;
+                }
+            }
+        }
+    }
+}
+
+/* css for lendingPartner -END*/
+
+
+
+
+/* css for footerGrids*/
+.footer {
+    background-color: #6F8195;
+    padding: 40px 0;
+    color: #ffffff;
+
+    .footerGrids {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        font-family: 'Sofia Pro';
+
+        >p {
+            font-size: 14px;
+            font-weight: 300;
+            line-height: calc(100% + 12px);
+        }
+
+        .privacyPolicy {
+            ul {
+                @media (max-width:768px) {
+                    justify-content: center;
+                }
+
+                li {
+                    a {
+                        color: #ffffff;
+                        font-weight: 300;
+
+                        &:hover {
+                            color: var(--infoColor) !important;
+                        }
+                    }
+
+                    +li {
+                        border-left: 2px solid #ffffff;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* css for footerGrids -END*/
+
+
+
+
+
+/* css for imported scss files */
+@import 'responsive';
+/* css for imported scss files -END*/

@@ -1,0 +1,406 @@
+/**
+ * @Main scss for (Template/Project Name)
+ * @project     - auto stack
+ * @author      - 
+ * @created_by  - kawsarBinSiraj
+ * @created_at  - 28/10/2020
+ * @modified_by -
+ */
+/* css for reset, root, fonts import */
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  background-color: #ffffff;
+  overflow-x: hidden; }
+
+:root {
+  --mainColor: #1d84c6;
+  --mainColorDark: #4276EE;
+  --infoColor: #9BDAEA;
+  --grayColor: #8C8681;
+  --grayLightColor: #EFEFEF; }
+
+/* css for reset, root, fonts import -END*/
+/* css for helper classes */
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: auto;
+  padding: 0 15px; }
+
+.img-fluid {
+  max-width: 100%;
+  width: auto;
+  height: auto; }
+
+.sectionTitle {
+  color: var(--mainColor);
+  font-size: 30px;
+  line-height: calc(100% + 8px); }
+  @media (max-width: 768px) {
+    .sectionTitle {
+      display: none; } }
+
+/*  css for helper classes -END*/
+/* css for header */
+@media (max-width: 768px) {
+  .header .container {
+    padding-left: 0 !important;
+    padding-right: 0 !important; } }
+.header img {
+  width: 100%;
+  height: auto; }
+  .header img#forMobile {
+    display: none; }
+  @media (max-width: 768px) {
+    .header img#forDesktop {
+      display: none; }
+    .header img#forMobile {
+      display: block; } }
+
+/* css for header -END*/
+/* css for financeApplication*/
+.financeApplication {
+  padding: 30px 0; }
+  .financeApplication .financeApplicationGrid-items {
+    margin-top: 80px;
+    display: grid;
+    grid-template-columns: 8fr 4fr;
+    grid-gap: 50px; }
+    @media (max-width: 768px) {
+      .financeApplication .financeApplicationGrid-items {
+        display: block;
+        margin-top: 0px; } }
+    .financeApplication .financeApplicationGrid-items .financeApplication-left .circleRangeInput-progressbar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column; }
+      .financeApplication .financeApplicationGrid-items .financeApplication-left .circleRangeInput-progressbar .circleRangeInputMainBox {
+        position: relative;
+        width: 230px;
+        height: 230px;
+        border-radius: 100%; }
+        .financeApplication .financeApplicationGrid-items .financeApplication-left .circleRangeInput-progressbar .circleRangeInputMainBox .rs-path-color {
+          background-color: #3E79EA !important; }
+        .financeApplication .financeApplicationGrid-items .financeApplication-left .circleRangeInput-progressbar .circleRangeInputMainBox .rs-handle {
+          background-color: var(--infoColor); }
+        .financeApplication .financeApplicationGrid-items .financeApplication-left .circleRangeInput-progressbar .circleRangeInputMainBox .rs-range-color {
+          background-color: #fff !important; }
+        .financeApplication .financeApplicationGrid-items .financeApplication-left .circleRangeInput-progressbar .circleRangeInputMainBox .rs-tooltip.edit,
+        .financeApplication .financeApplicationGrid-items .financeApplication-left .circleRangeInput-progressbar .circleRangeInputMainBox .rs-tooltip .rs-input {
+          padding: 0; }
+        .financeApplication .financeApplicationGrid-items .financeApplication-left .circleRangeInput-progressbar .circleRangeInputMainBox .full .rs-tooltip {
+          top: 60% !important; }
+        .financeApplication .financeApplicationGrid-items .financeApplication-left .circleRangeInput-progressbar .circleRangeInputMainBox .rs-tooltip-text {
+          font-size: 22px; }
+        .financeApplication .financeApplicationGrid-items .financeApplication-left .circleRangeInput-progressbar .circleRangeInputMainBox p {
+          position: absolute;
+          left: 50%;
+          max-width: 145px;
+          width: 100%;
+          transform: translateX(-50%);
+          top: 80px;
+          text-align: center;
+          z-index: 100; }
+      @media (min-width: 768px) {
+        .financeApplication .financeApplicationGrid-items .financeApplication-left .circleRangeInput-progressbar {
+          display: none; } }
+    @media (max-width: 768px) {
+      .financeApplication .financeApplicationGrid-items .financeApplication-left .rangeInput-progressbar {
+        margin-top: 25px; } }
+    .financeApplication .financeApplicationGrid-items .financeApplication-left .rangeInput-progressbar .rangeInput-progressbar-item + .rangeInput-progressbar-item {
+      margin-top: 30px; }
+      @media (max-width: 768px) {
+        .financeApplication .financeApplicationGrid-items .financeApplication-left .rangeInput-progressbar .rangeInput-progressbar-item + .rangeInput-progressbar-item {
+          margin-top: 40px; } }
+    .financeApplication .financeApplicationGrid-items .financeApplication-left .rangeInput-progressbar .rangeInput-progressbar-item > label {
+      display: block;
+      font-size: 16px;
+      font-weight: 500;
+      color: #222222;
+      margin-bottom: 15px; }
+
+.approximateContent-box {
+  margin-top: 35px; }
+  .approximateContent-box.onlyForMobile {
+    display: none; }
+    @media (max-width: 768px) {
+      .approximateContent-box.onlyForMobile {
+        margin-top: 0px;
+        display: block; } }
+  .approximateContent-box.onlyForDesktop {
+    display: block; }
+    @media (max-width: 768px) {
+      .approximateContent-box.onlyForDesktop {
+        display: none; } }
+  .approximateContent-box .help {
+    margin-top: 10px;
+    font-size: 13px;
+    color: var(--grayColor);
+    font-weight: 400;
+    line-height: 20px; }
+    @media (max-width: 768px) {
+      .approximateContent-box .help {
+        display: none; } }
+  .approximateContent-box .approximateContent {
+    border: 1px solid #222222;
+    padding: 50px;
+    min-height: 225px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    @media (max-width: 768px) {
+      .approximateContent-box .approximateContent {
+        min-height: auto;
+        border: 0;
+        text-align: center;
+        padding: 20px; } }
+    .approximateContent-box .approximateContent .approximateContent-title {
+      font-size: 15px;
+      color: var(--grayColor);
+      margin-bottom: 20px; }
+      @media (max-width: 768px) {
+        .approximateContent-box .approximateContent .approximateContent-title {
+          margin-bottom: 10px; } }
+    .approximateContent-box .approximateContent .approximateContent-main {
+      font-size: calc(2vw + 22px);
+      color: var(--grayColor);
+      font-weight: 400; }
+      @media (max-width: 768px) {
+        .approximateContent-box .approximateContent .approximateContent-main {
+          color: #222;
+          font-size: 32px; } }
+      .approximateContent-box .approximateContent .approximateContent-main > span {
+        font-size: 18px; }
+
+.financeApplication-tab {
+  margin-top: 50px; }
+  .financeApplication-tab .tabLists {
+    list-style: none; }
+    .financeApplication-tab .tabLists a {
+      text-decoration: none; }
+
+.financeApplication-tabModule .tabLists {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); }
+  .financeApplication-tabModule .tabLists li a {
+    color: #686868;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 34px 25px;
+    display: block;
+    text-align: center;
+    position: relative; }
+    @media (max-width: 768px) {
+      .financeApplication-tabModule .tabLists li a {
+        padding: 15px 0px;
+        font-size: 13px; } }
+    .financeApplication-tabModule .tabLists li a::after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      height: 10px;
+      background-color: var(--grayLightColor); }
+    .financeApplication-tabModule .tabLists li a.activeTab {
+      color: #000000; }
+      .financeApplication-tabModule .tabLists li a.activeTab::after {
+        background-color: var(--infoColor);
+        border-radius: 20px; }
+    .financeApplication-tabModule .tabLists li a i {
+      font-size: 32px; }
+      @media (max-width: 768px) {
+        .financeApplication-tabModule .tabLists li a i {
+          font-size: 20px; } }
+    .financeApplication-tabModule .tabLists li a p {
+      margin-top: 10px; }
+  .financeApplication-tabModule .tabLists li:first-child a::after {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px; }
+  .financeApplication-tabModule .tabLists li:last-child a::after {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px; }
+
+.financeApplication-tabContent {
+  margin-top: 100px; }
+  @media (max-width: 576px) {
+    .financeApplication-tabContent {
+      margin-top: 50px; } }
+  .financeApplication-tabContent .active {
+    display: block; }
+  .financeApplication-tabContent .hide {
+    display: none; }
+  .financeApplication-tabContent .list {
+    width: 100%;
+    text-align: left; }
+    @media (max-width: 576px) {
+      .financeApplication-tabContent .list .form-group {
+        margin-bottom: 15px; } }
+    .financeApplication-tabContent .list .form-group.select-purpose {
+      max-width: 400px;
+      width: 100%;
+      margin-bottom: 60px; }
+      @media (max-width: 576px) {
+        .financeApplication-tabContent .list .form-group.select-purpose {
+          max-width: 100%;
+          margin-bottom: 15px; } }
+    .financeApplication-tabContent .list .form-group label {
+      display: block;
+      margin-bottom: 10px; }
+    .financeApplication-tabContent .list .form-group .form-control,
+    .financeApplication-tabContent .list .form-group .select2 {
+      display: block;
+      width: 100% !important;
+      height: 32px; }
+    .financeApplication-tabContent .list .form-group .form-control,
+    .financeApplication-tabContent .list .form-group .select2-container .select2-selection--single {
+      display: block;
+      width: 100% !important;
+      height: 32px;
+      padding-left: 10px;
+      padding-right: 10px;
+      border-radius: 0;
+      background-color: #fff;
+      border: 1px solid #aaa; }
+    .financeApplication-tabContent .list .col-full-group {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 20px;
+      grid-row-gap: 20px; }
+      @media (max-width: 576px) {
+        .financeApplication-tabContent .list .col-full-group {
+          display: block; } }
+    .financeApplication-tabContent .list .form-check {
+      display: flex;
+      align-items: center;
+      grid-column-gap: 10px; }
+      .financeApplication-tabContent .list .form-check label {
+        margin-bottom: 0px;
+        position: relative;
+        top: -2px; }
+    .financeApplication-tabContent .list .submit-step-list-group ul {
+      padding-left: 40px;
+      list-style-position: inside; }
+      .financeApplication-tabContent .list .submit-step-list-group ul li {
+        font-size: 16px;
+        line-height: calc(100% + 10px);
+        font-weight: 400; }
+    .financeApplication-tabContent .list .submit-step-list-group p {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: calc(100% + 10px); }
+  .financeApplication-tabContent .btn-steps {
+    margin-top: 30px;
+    display: flex;
+    justify-content: flex-end;
+    grid-gap: 10px; }
+    .financeApplication-tabContent .btn-steps button {
+      display: inline-block;
+      padding: 7px 35px;
+      color: #EFEFEF;
+      background-color: var(--mainColorDark);
+      border: 0;
+      outline: 0;
+      cursor: pointer;
+      transition: all .3s; }
+      .financeApplication-tabContent .btn-steps button#btn-prev {
+        background-color: var(--grayColor); }
+      .financeApplication-tabContent .btn-steps button#btn-submit {
+        background-color: green; }
+      .financeApplication-tabContent .btn-steps button:hover {
+        background-color: var(--mainColor) !important; }
+
+.ui-widget-header .ui-icon {
+  background-image: url(../img/ui-icons_444444_256x240.png); }
+
+/* css for financeApplication -END*/
+/* css for privacyPolicy */
+.privacyPolicy-sec .privacyPolicy {
+  border-top: 2px solid #ddd;
+  margin-top: 45px;
+  padding-top: 10px;
+  padding-bottom: 10px; }
+  @media (max-width: 768px) {
+    .privacyPolicy-sec .privacyPolicy ul {
+      justify-content: center; } }
+
+.privacyPolicy ul {
+  display: flex;
+  list-style: none; }
+  .privacyPolicy ul li {
+    padding: 0 10px;
+    line-height: 10px; }
+    .privacyPolicy ul li:first-child {
+      padding-left: 0; }
+    .privacyPolicy ul li:last-child {
+      padding-right: 0; }
+    .privacyPolicy ul li a {
+      font-weight: 400;
+      color: var(--mainColorDark);
+      text-decoration: none;
+      transition: all .3s;
+      font-size: 14px; }
+      .privacyPolicy ul li a:hover {
+        color: var(--infoColor); }
+    .privacyPolicy ul li + li {
+      border-left: 2px solid var(--mainColorDark); }
+
+/* css for privacyPolicy -END*/
+/* css for lendingPartner*/
+.lendingPartner {
+  margin-top: 100px;
+  margin-bottom: 50px; }
+  @media (max-width: 768px) {
+    .lendingPartner {
+      margin-top: 50px;
+      margin-bottom: 50px;
+      text-align: center; } }
+  .lendingPartner p {
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: var(--grayColor); }
+
+/* css for lendingPartner -END*/
+/* css for footerGrids*/
+.footer {
+  background-color: #404040;
+  padding: 25px 0;
+  color: #ffffff; }
+  .footer .footerGrids {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; }
+    @media (max-width: 768px) {
+      .footer .footerGrids {
+        display: block; } }
+    .footer .footerGrids > p {
+      font-size: 14px;
+      font-weight: 400; }
+      @media (max-width: 768px) {
+        .footer .footerGrids > p {
+          margin-bottom: 10px;
+          text-align: center; } }
+    @media (max-width: 768px) {
+      .footer .footerGrids .privacyPolicy ul {
+        justify-content: center; } }
+    .footer .footerGrids .privacyPolicy ul li a {
+      color: #ffffff;
+      font-weight: 400; }
+      .footer .footerGrids .privacyPolicy ul li a:hover {
+        color: var(--infoColor) !important; }
+    .footer .footerGrids .privacyPolicy ul li + li {
+      border-left: 2px solid #ffffff; }
+
+/* css for footerGrids -END*/
+
+/*# sourceMappingURL=style.css.map */

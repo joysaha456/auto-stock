@@ -1,0 +1,113 @@
+/* @media (max-width: 768px)  */
+@media (max-width: 768px) {
+    .header {
+        .container-fluid {
+            padding: 0;
+        }
+    }
+
+    .financeApplication {
+        padding: 45px 0;
+
+
+        .financeApplicationGrid-items {
+            display: block;
+            margin-top: 50px;
+            padding-bottom: 50px;
+
+            .rangeSliderInput-panel .rangeSliderInput-item>label {
+                text-align: center;
+            }
+
+            .approximateContent {
+                margin-top: 60px;
+            }
+        }
+    }
+
+    .applicationSteps {
+        .financeApplication-tabModule .tabLists {
+            justify-content: center;
+            grid-gap: 10px;
+
+            li a {
+                width: 150px !important;
+                height: 80px !important;
+            }
+        }
+
+        .tabListItems {
+            padding-bottom: 15px !important;
+            
+
+            .list {
+                .form-group {
+                    margin-bottom: 30px;
+                }
+
+                .col-full-group {
+                    display: block !important;
+                }
+
+                .submit-step-list-group ul {
+                    padding-left: 10px !important;
+                }
+
+                .col-gridBy-span-2 {
+                    display: block !important;
+                }
+            }
+        }
+
+        .financeApplication-tabContent {
+            .btn-steps {
+                justify-content: center !important;
+            }
+        }
+    }
+
+
+    .sectionHeader {
+        text-align: center;
+    }
+}
+
+
+
+
+/* @media (max-width: 576px)  */
+@media (max-width: 576px) {
+    .applicationSteps .financeApplication-tabModule .tabLists {
+        grid-gap: 5px;
+    }
+
+    .financeApplication-tabContent .btn-steps {
+        button {
+            padding: 10px 20px !important;
+        }
+    }
+
+    .lendingPartner {
+        padding: 50px 0;
+    }
+
+    .footer .footerGrids {
+        display: block;
+        text-align: center;
+
+        >p {
+            margin-bottom: 20px;
+            font-size: 14px;
+            font-weight: 300;
+            line-height: calc(100% + 12px);
+        }
+    }
+}
+
+/*  @media (min-width: 768px) */
+@media (max-width: 340px) {
+    .applicationSteps .financeApplication-tabModule .tabLists li a {
+        width: 130px !important;
+        height: 75px !important;
+    }
+}
